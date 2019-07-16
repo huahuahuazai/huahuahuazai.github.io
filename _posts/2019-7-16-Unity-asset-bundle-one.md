@@ -239,6 +239,30 @@ author: FSH
 
 * 依赖包加载
     * 使用有依赖的ab时，必须加载其所依赖的ab，否则显示是不正常的。
+    ``` c#
+        /// <summary>
+        /// 依赖AB加载
+        /// </summary>
+        void LoadRelyAB ()
+        {
+            string cubeAbPath = "AssetBundles/wall/cubewall.unity";
+            AssetBundle ab = AssetBundle.LoadFromFile(cubeAbPath);
+            GameObject obj = ab.LoadAsset<GameObject>("cubewall");
+
+            //获取依赖信息
+            AssetBundle manifestAB = AssetBundle.LoadFromFile("AssetBundles/AssetBundles");
+            AssetBundleManifest manifest = manifestAB.LoadAsset<AssetBundleManifest>("AssetBundleManifest");
+            string[] strs = manifest.GetAllDependencies("wall/cubewall.unity");
+
+            //加载所有依赖AB
+            foreach(string name in strs)
+            {
+                AssetBundle.LoadFromFile("AssetBundles/" + name);
+            }
+
+            Instantiate(obj);
+        }
+    ```
 
 ## 4、Asset Bundles 卸载
 
@@ -274,4 +298,43 @@ author: FSH
     * 把一些需要同时加载的小资源打包成一个包
     * 如果对于一个同一个资源有两个版本，可以考虑通过后缀来区分  v1  v2  v3  unity3dv1 unity3dv2
 
+## 6、Manifest文件
+
+![](http://ww1.sinaimg.cn/large/006zwgbUly1g51x9qayl6j30k60fmjs9.jpg)
+
+* crc为校验码，通过其检查是否完整
+* Assets 表示包里包含多少资源
+* Dependencies 表示包有哪些依赖
+
+**注意：在加载这些包之前，也需要加载依赖的包，不然会丢失这部分内容，显示效果不正确**
+
+## 7、文件校验
+
+* 主要有 CRC MD5 SHA1 三种
+* 区别
+    * 相同点：
+        * CRC、MD5、SHA1都是通过对数据进行计算，来生成一个校验值，该校验值用来校验数据的完整性。
+    * 不同点：
+        * 算法不同。CRC采用多项式除法，MD5和SHA1使用的是替换、轮转等方法；
+        * 校验值的长度不同。CRC校验位的长度跟其多项式有关系，一般为16位或32位；MD5是16个字节（128位）；SHA1是20个字节（160位）；
+        * 校验值的称呼不同。CRC一般叫做CRC值；MD5和SHA1一般叫做哈希值（Hash）或散列值；
+        * 安全性不同。这里的安全性是指检错的能力，即数据的错误能通过校验位检测出来。CRC的安全性跟多项式有很大关系，相对于MD5和SHA1要弱很多；MD5的安全性很高，不过大概在04年的时候被山东大学的王小云破解了；SHA1的安全性最高。
+        * 效率不同，CRC的计算效率很高；MD5和SHA1比较慢。
+        * 用途不同。CRC一般用作通信数据的校验；MD5和SHA1用于安全（Security）领域，比如文件校验、数字签名等。
+
+## 8、AssetBundles浏览工具
+
+* [Github地址](https://github.com/Unity-Technologies/AssetBundles-Browser),工程中工具位置是 Window/AssetBundle Browser
+* configure 中可以查看所有 AB 信息
+    ![](http://ww1.sinaimg.cn/large/006zwgbUly1g51xi7gyg8j30gd0arq35.jpg)
+
+* build 里可进行打包
+    Build Target 用于设置AB包的目标平台,OutPut Path 设置AB的输出路径,Build 一键打包
+    ![](http://ww1.sinaimg.cn/large/006zwgbUly1g51xi9fws9j30gd0arweo.jpg)
+
+# 结语
+
+本文说明的只是一些Asset Bundle的基础知识和用法[参考文章](https://blog.csdn.net/qq_35361471/article/details/82854560)，商业项目中一般不会这样使用，而是使用针对自己项目的自动化处理工具，以期准确高效的推进进度。但是这些基础知识却也是前提。
+
+之后我也会去研究学习一些商业的使用，有了总结会在这里贴出来的-->>[修建中的传送门、、、](https://huahuahuazai.github.io)。
 
