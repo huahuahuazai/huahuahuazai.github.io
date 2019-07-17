@@ -276,6 +276,8 @@ author: FSH
         * 资源没被用的时候调用
     * AssetBundle.Unload(false) 卸载所有没用被使用的资源
 	* Resources.UnloadUnusedAssets 卸载个别未使用的资源
+    ![](http://ww1.sinaimg.cn/large/006zwgbUly1g52mtujtpkj30k60exgnf.jpg)
+    [资源卸载详解](https://blog.csdn.net/anypkv/article/details/52924386)
 
 ## 5、Asset Bundle 分组策略、建议
 
