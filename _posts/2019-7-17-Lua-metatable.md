@@ -18,7 +18,9 @@ lua元表(Metatable)是lua提供给我们改变table行为的方法，每个行�
 
 
 
-    
+
+
+
 * 设置元表
 
     ``` lua
