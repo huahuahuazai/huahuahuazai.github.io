@@ -77,7 +77,7 @@ __newindex  |  给一个索引赋值
     ```
 **当Lua试图对两个表进行相加时，先检查两者之一是否有元表，之后检查是否有一个叫"__add"的字段，若找到，则调用对应的值。"__add"等即时字段，其对应的值（往往是一个函数或是table）就是"元方法"。**
 
-    ** \_\_sub, \_\_mul, \_\_div, \_\_mod, \_\_unm, \_\_concat, \_\_eq, \_\_lt, \_\_le与\_\_add雷同，这里就不做说明了**
+    **sub, mul, div, mod, unm, concat, eq, lt, le与add雷同，这里就不做说明了**
 
 * \_\_index
     \_\_index是 metatable 最常用的键，用来对表访问，\_\_index可以是一个函数也可是一个table。
@@ -120,11 +120,11 @@ __newindex  |  给一个索引赋值
     ```
 
     * 总结
-        出处[菜鸟教程lua元表](https://www.runoob.com/lua/lua-metatables.html)
-        Lua 查找一个表元素时的规则，其实就是如下 3 个步骤:
-            在表中查找，如果找到，返回该元素，找不到则继续；
-            判断该表是否有元表，如果没有元表，返回 nil，有元表则继续；
-            判断元表有没有 \_\_index 方法，如果 \_\_index 方法为 nil，则返回 nil；如果 \_\_index 方法是一个表，则重复 1、2、3；如果 \_\_index 方法是一个函数，则返回该函数的返回值。
+    出处[菜鸟教程lua元表](https://www.runoob.com/lua/lua-metatables.html)
+    Lua 查找一个表元素时的规则，其实就是如下 3 个步骤:
+        在表中查找，如果找到，返回该元素，找不到则继续；
+        判断该表是否有元表，如果没有元表，返回 nil，有元表则继续；
+        判断元表有没有 \_\_index 方法，如果 \_\_index 方法为 nil，则返回 nil；如果 \_\_index 方法是一个表，则重复 1、2、3；如果 \_\_index 方法是一个函数，则返回该函数的返回值。
 
 * \_\_newindex
     \_\_newindex 元方法用来对表更新，当为table中一个不存在的key时，会去调用元表中的\_\_newindex元方法,而不进行赋值；如果为table中一个存在的key时，则会进行赋值，而不调用元方法 \_\_newindex。\_\_newindex可以是一个函数也可是一个table。
