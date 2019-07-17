@@ -15,6 +15,10 @@ lua元表(Metatable)是lua提供给我们改变table行为的方法，每个行�
 * 有两个很重要的函数来处理元表：
     * setmetatable(table,metatable): 对指定 table 设置元表(metatable)，如果元表(metatable)中存在 __metatable 键值，setmetatable 会失败；
     * getmetatable(table): 返回对象的元表(metatable)。
+
+
+
+    
 * 设置元表
 
     ``` lua
