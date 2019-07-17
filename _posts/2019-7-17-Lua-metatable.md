@@ -53,6 +53,7 @@ __index  |  调用一个索引
 __newindex  |  给一个索引赋值
 
 * \_\_add
+
     使用元表定义Lua如何计算两个table的相加操作a+b。
 
     ``` lua
@@ -80,95 +81,102 @@ __newindex  |  给一个索引赋值
     **sub, mul, div, mod, unm, concat, eq, lt, le与add雷同，这里就不做说明了**
 
 * \_\_index
+
     \_\_index是 metatable 最常用的键，用来对表访问，\_\_index可以是一个函数也可是一个table。
 
     * \_\_index 为 table:
-    当你通过键来访问 table 的时候，如果这个键没有值，那么Lua就会寻找该table的metatable（假定有metatable）中的\_\_index 键。如果\_\_index包含一个表，Lua会在表中查找相应的键。
 
-    ``` lua
-        local tarkey = {
-            name = "__index为table",
-        }
-        local tempT = {}
-        setmetatable(tempT,{__index = tarkey})
-        print(tempT.name)
-        -- 输出为 __index为table
-    ```
+        当你通过键来访问 table 的时候，如果这个键没有值，那么Lua就会寻找该table的metatable（假定有metatable）中的\_\_index 键。如果\_\_index包含一个表，Lua会在表中查找相应的键。
+
+        ``` lua
+            local tarkey = {
+                name = "__index为table",
+            }
+            local tempT = {}
+            setmetatable(tempT,{__index = tarkey})
+            print(tempT.name)
+            -- 输出为 __index为table
+        ```
 
     * \_\_index 为 函数:
-    如果\_\_index包含一个函数的话，Lua就会调用那个函数，table和键会作为参数传递给函数。\_\_index 元方法查看表中元素是否存在，如果不存在，返回结果为 nil；如果存在则由 \_\_index 返回结果。
 
-    ``` lua
-        local mt = {
-            name = "__index 为函数",
-        }
-        
-        local tempT = {}
-        print(tempT.name)
-        -- 输出为 nil
-        setmetatable(tempT,{__index = function (tab,key)
-            if mt[key] then 
-                return mt[key]
-            else
-                return "mt 中不存在 " .. key
-            end
-        end})
-        print(tempT.name)
-        -- 输出为 __index 为函数
-        print(tempT.value)
-        -- 输出为 mt 中不存在 value
-    ```
+        如果\_\_index包含一个函数的话，Lua就会调用那个函数，table和键会作为参数传递给函数。\_\_index 元方法查看表中元素是否存在，如果不存在，返回结果为 nil；如果存在则由 \_\_index 返回结果。
+
+        ``` lua
+            local mt = {
+                name = "__index 为函数",
+            }
+            
+            local tempT = {}
+            print(tempT.name)
+            -- 输出为 nil
+            setmetatable(tempT,{__index = function (tab,key)
+                if mt[key] then 
+                    return mt[key]
+                else
+                    return "mt 中不存在 " .. key
+                end
+            end})
+            print(tempT.name)
+            -- 输出为 __index 为函数
+            print(tempT.value)
+            -- 输出为 mt 中不存在 value
+        ```
 
     * 总结
-    出处[菜鸟教程lua元表](https://www.runoob.com/lua/lua-metatables.html)
-    Lua 查找一个表元素时的规则，其实就是如下 3 个步骤:
-        在表中查找，如果找到，返回该元素，找不到则继续；
-        判断该表是否有元表，如果没有元表，返回 nil，有元表则继续；
-        判断元表有没有 \_\_index 方法，如果 \_\_index 方法为 nil，则返回 nil；如果 \_\_index 方法是一个表，则重复 1、2、3；如果 \_\_index 方法是一个函数，则返回该函数的返回值。
+
+        出处[菜鸟教程lua元表](https://www.runoob.com/lua/lua-metatables.html)
+        * Lua 查找一个表元素时的规则，其实就是如下 3 个步骤:
+            * 1、在表中查找，如果找到，返回该元素，找不到则继续；
+            * 2、判断该表是否有元表，如果没有元表，返回 nil，有元表则继续；
+            * 3、判断元表有没有 \_\_index 方法，如果 \_\_index 方法为 nil，则返回 nil；如果 \_\_index 方法是一个表，则重复 1、2、3；如果 \_\_index 方法是一个函数，则返回该函数的返回值。
 
 * \_\_newindex
+
     \_\_newindex 元方法用来对表更新，当为table中一个不存在的key时，会去调用元表中的\_\_newindex元方法,而不进行赋值；如果为table中一个存在的key时，则会进行赋值，而不调用元方法 \_\_newindex。\_\_newindex可以是一个函数也可是一个table。
 
     * \_\_newindex 为table
 
-    ``` lua 
-        local mt = {}
-        local tempT = {value = "当前值"}
-        print(tempT.value)
-        -- 输出为 当前值
+        ``` lua 
+            local mt = {}
+            local tempT = {value = "当前值"}
+            print(tempT.value)
+            -- 输出为 当前值
 
-        setmetatable(tempT,{__newindex = mt})
-        tempT.newvalue = "新值1"
-        print(tempT.newvalue,mt.newvalue)
-        -- 输出为 nil , 新值1
+            setmetatable(tempT,{__newindex = mt})
+            tempT.newvalue = "新值1"
+            print(tempT.newvalue,mt.newvalue)
+            -- 输出为 nil , 新值1
 
-        tempT.value = "新值2"
-        print(tempT.value,mt.value)
-        --输出为 新值2 , nil
-    ```
+            tempT.value = "新值2"
+            print(tempT.value,mt.value)
+            --输出为 新值2 , nil
+        ```
 
     * \_\_newindex 为函数
     
-    ``` lua
-        local tempT = {
-            name = "原始"
-        }
-        print(tempT.name)
-        -- 输出为 原始
+        ``` lua
+            local tempT = {
+                name = "原始"
+            }
+            print(tempT.name)
+            -- 输出为 原始
 
-        setmetatable(tempT,{__newindex = function (t,key,value)
-            rawset(t,key,"new " .. value)
-        end})
-        tempT.name = "new 原始"
-        tempT.age = 10
-        print(tempT.name,tempT.age)
-        -- 输出为 new 原始 , new 10
-    ```
+            setmetatable(tempT,{__newindex = function (t,key,value)
+                rawset(t,key,"new " .. value)
+            end})
+            tempT.name = "new 原始"
+            tempT.age = 10
+            print(tempT.name,tempT.age)
+            -- 输出为 new 原始 , new 10
+        ```
+        
     * rawget 和 rawset
-    **rawget可以让你直接获取到表中索引的实际值，而不通过元表的\_\_index元方法**
-    **rawset可以让你直接为表中索引的赋值，而不通过元表的\_\_newindex元方法**
+        * **rawget可以让你直接获取到表中索引的实际值，而不通过元表的\_\_index元方法**
+        * **rawset可以让你直接为表中索引的赋值，而不通过元表的\_\_newindex元方法**
 
 * \_\_call
+
     \_\_call可以让table当做一个函数来使用
 
     ``` lua 
@@ -187,6 +195,7 @@ __newindex  |  给一个索引赋值
     ```
 
 * \_\_tostring
+
     \_\_tostring用于修改表的输出行为
 
     ``` lua 
