@@ -2,7 +2,7 @@
 layout: post
 title:  "Unity 图集的理解与使用"
 categories: unity
-tags: atlas
+tags: spritepacker
 author: FSH
 ---
 
