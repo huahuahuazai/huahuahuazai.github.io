@@ -151,4 +151,4 @@ author: FSH
 
 # 补充
 
-Unity2017之后开始使用Sprite Atlas（精灵图集），我也学习了下，大家可以看下我的这篇文章[Unity SpriteAtlas的学习]()
+Unity2017之后开始使用Sprite Atlas（精灵图集），我也学习了下，大家可以看下我的这篇文章[Unity SpriteAtlas的学习](https://huahuahuazai.github.io/2019/07/23/Unity-sprite-atlas/)
