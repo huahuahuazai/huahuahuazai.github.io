@@ -73,7 +73,7 @@ Sprite Atlas是一种资源，可以像其它资源一样在Unity中创建，例
     ```
 * 从AssetBundle加载使用图集
 
-    此处摘录自[Unity2017的新spriteAtlas](www.litefeel.com)
+    此处摘录自[Unity2017的新spriteAtlas](https://www.litefeel.com/unity-2017-new-sprite-atlas/#comment-28099)
     ``` c# 
         using UnityEngine;
         using UnityEngine.U2D;
