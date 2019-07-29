@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Lua 元表理解"
+title:  "Lua 元表学习"
 categories: lua
 tags: metatable
 author: FSH

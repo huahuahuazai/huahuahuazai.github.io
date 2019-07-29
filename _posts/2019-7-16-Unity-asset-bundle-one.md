@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Unity Asset Bundle 入门讲解"
+title:  "Unity Asset Bundle 入门学习"
 categories: unity
 tags: assetbudle
 author: FSH
