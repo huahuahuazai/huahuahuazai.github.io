@@ -114,6 +114,7 @@ type: page
             红点系统，新手引导，UI动效，系统开启，主界面布局,通用底板。
 
             **还有一些其他小的系统就不记录在这里了，下面简单贴几张图**
+
             ![](http://ww1.sinaimg.cn/large/005OSXbNly1g5lmi31xvtj30pg0eh0vm.jpg)
 
             ![](http://ww1.sinaimg.cn/large/005OSXbNly1g5lmigiuf8j30o40dz75c.jpg)
@@ -133,6 +134,7 @@ type: page
             ![](http://ww1.sinaimg.cn/large/005OSXbNly1g5lmkc7bpyj30af07oweu.jpg)
             
             ![](http://ww1.sinaimg.cn/large/005OSXbNly1g5lmkiw6x0j308e06kwep.jpg)
+
         * UI优化
 
             主要优化项目里的UI：drowcall,overcall，图集；ui与特效模型间的层级关系。
@@ -154,32 +156,44 @@ type: page
                 * 添加animation,绑定动画；
                 * 修改layer；
                 * 检查材质，shader。
+
                 ![](http://ww1.sinaimg.cn/large/005OSXbNly1g5ln9w4ijej30b207zq33.jpg)
+
                 ![](http://ww1.sinaimg.cn/large/005OSXbNly1g5lnabgvv8j30ho0faaay.jpg)
+
             * 预制检查工具
                 * 检查预制材质（剔除使用morenshader）；
                 * 检查使用了特效的预制（预制经常改，5.6存在预制嵌套的问题）
                 * 删除空的animator;
                 * 取消射线检测。
+
                 ![](http://ww1.sinaimg.cn/large/005OSXbNly1g5lnbb4vw3j30bi08qt8t.jpg)
+
             * UI处理工具（主要服务于drowcall的优化）
                 * 设置UI所有子节点Z为零；
                 * 检查UI坐标Z大于0的节点；
                 * 检查UI使用了canvas的节点；
                 * 显示UI锁使用到的图集。
+
                 ![](http://ww1.sinaimg.cn/large/005OSXbNly1g5lnguhg9jj30b408ft8r.jpg)
+
             * 图片检查工具
                 * 检查并替换UI中的白图，避免打开界面是闪一下；
                 * 批量压缩还原图片，是要用于缩减首包体积；
                 * 批量检查设置图片图集；
                 * 批量检查处理大于1024的图片，并压缩为最大1024。
+
                 ![](http://ww1.sinaimg.cn/large/005OSXbNly1g5lnnjrhjjj30ac0433yf.jpg)
+
             * 动作处理工具
                 * 批量提取动作；
                 * 批量附加动作；
                 * 按规定处理动作；
+
                 ![](http://ww1.sinaimg.cn/large/005OSXbNly1g5lnph2nu5j30a30163ya.jpg)
+
                 * 检查没有被使用的图片
+                
                 ![](http://ww1.sinaimg.cn/large/005OSXbNly1g5lnr14eohj307c01ljr7.jpg)
 
 
