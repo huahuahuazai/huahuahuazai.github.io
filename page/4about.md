@@ -147,7 +147,8 @@ type: page
             * SimpleLod  减面工具；
             * UberLogger log控制台，手机可用（非SDK包开启）；
             * DoTween 动效；
-            * UnityStudio 查看asset bundle；
+            * AseetBundleView 查看asset bundle（unity内部看）；
+            * UnityStudio 查看asset bundle（解包看）；
             * LitJson。
         * 自己写的一些辅助工具
             * 模型处理工具
@@ -193,7 +194,7 @@ type: page
                 ![](http://ww1.sinaimg.cn/large/005OSXbNly1g5lnph2nu5j30a30163ya.jpg)
 
                 * 检查没有被使用的图片
-                
+
                 ![](http://ww1.sinaimg.cn/large/005OSXbNly1g5lnr14eohj307c01ljr7.jpg)
 
 
