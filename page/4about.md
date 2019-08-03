@@ -140,7 +140,7 @@ type: page
             主要优化项目里的UI：drowcall,overcall，图集；ui与特效模型间的层级关系。
             * drowcall,overcall可以看我的[Unity 中的 DrawCall](https://fanshaohua.top/2019/07/22/DrowCall-for-unity/)
             * 图集的管理可以看我的[Unity 图集的理解与使用](https://fanshaohua.top/2019/07/22/Unity-sprite-packer/)
-            * ui与特效，模型间的层级可以看我的[UI与特效模型间的层级理解]()
+            * ui与特效，模型间的层级可以看我的[UI与特效模型间的层级理解](https://fanshaohua.top/2019/07/28/Unity-ui-level/)
 
         * 使用的第三方工具
             * TextMesh Pro 字体组件；
