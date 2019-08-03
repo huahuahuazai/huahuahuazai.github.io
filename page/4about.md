@@ -11,6 +11,8 @@ type: page
 
 ## 关于我
 
+![](http://ww1.sinaimg.cn/large/005OSXbNly1g5msenjim9j30cj06cdgf.jpg)
+
 ## 工作经历
 
 * 2016.7 - 2016.9  服装外贸
