@@ -18,6 +18,7 @@ author: FSH
 * Sorting Layer
 
     &emsp;&emsp;相同Camera的情况下，可以设置Sorting Layer来控制渲染顺序，可以在Edit->ProjectSettings->Tags&Layers中设置，设置过Sorting Layer后，其渲染是从下往上依次渲染的，也就是说Tags&Layers中，越下面的Sorting Layer越早渲染。
+    
     ![](http://ww1.sinaimg.cn/large/005OSXbNly1g5m9vckylrj30ao0att8u.jpg)
 
 
