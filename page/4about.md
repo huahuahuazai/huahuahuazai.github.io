@@ -15,43 +15,33 @@ type: page
 
 * 语言
 
-    > 熟练：C#，Lua
-
-    > 了解：Python，C++，shaderLab
+    * 熟练：C#，Lua
+    * 了解：Python，C++，shaderLab
 
 * 游戏引擎及开发工具
 
-    > 熟练：Unity，Visual Studio，Visual Code，SubLime，SVN，GIT
-
-    > 了解：Android Studio，LayaAir2，Jenkins
+    * 熟练：Unity，Visual Studio，Visual Code，SubLime，SVN，GIT
+    * 了解：Android Studio，LayaAir2，Jenkins
 
 * Unity相关
 
-    > 参与的正式项目：奇迹手游（MMO，未上线目前测试中），3D麻将（仅上线OPPO渠道），3D五子棋（版号申请中）
-
-    > 一些个荣誉：2018年盛和年度优秀员工；2019年开启优秀新人
-
-    > UI：NGUI，UGUI，图集处理，draw call优化，over draw优化，ui与模型及ui与特效层级管理
-
-    > 热更框架：tolua
-
-    > 资源：资源分类整理，ab打包策略及加载流程，脚本自动化打包
-
-    > 编辑器：工具拓展（我做过的：模型处理工具，prefab检查工具，UI处理工具，图片设置工具，自动打包工具）
-
-    > 动作方面：animator，animation都做过，由于时间紧且无需求并未深入研究
+    * 参与的正式项目：奇迹手游（MMO，未上线目前测试中），3D麻将（仅上线OPPO渠道），3D五子棋（版号申请中）
+    * 一些个荣誉：2018年盛和年度优秀员工；2019年开启优秀新人
+    * UI：NGUI，UGUI，图集处理，draw call优化，over draw优化，ui与模型及ui与特效层级管理
+    * 热更框架：tolua
+    * 资源：资源分类整理，ab打包策略及加载流程，脚本自动化打包
+    * 编辑器：工具拓展（我做过的：模型处理工具，prefab检查工具，UI处理工具，图片设置工具，自动打包工具）
+    * 动作方面：animator，animation都做过，由于时间紧且无需求并未深入研究
 
 * 之后想做的事
 
-    > shderLab深入提升
-
-    > 接触和研究框架
-
-    > 接触和研究网络通信
+    * shderLab深入提升
+    * 接触和研究框架
+    * 接触和研究网络通信
 
 * 一些兴趣
 
-    > Linux，撰写博客，学习视频剪辑，玩游戏（只喜欢主机游戏，不玩网游）
+    * Linux，撰写博客，学习视频剪辑，玩游戏（只喜欢主机游戏，不玩网游）
 
 
 ## 工作经历
@@ -63,54 +53,53 @@ type: page
 
         * 3D五子棋
 
-            > 时间：2020.1.6 - 2020.2.26；
+            * 时间：2020.1.6 - 2020.2.26；
+            * 目前状态：开发完成，版号申请中；
+            * 人员构成：一产品，三开发（一个后端，两个前端），一测试，我和另一个u3d程序负责开发，我主要负责游戏逻辑层处理，另一个负责底层；
+            * 简介：unity版本2018.4.10，NGUI系统，tolua热更框架，Animator动作系统，unity + Android Studio + Jenkins 自动出包。
+            * 我的主要工作
+                ① UI界面搭建及业务逻辑；
 
-            > 目前状态：开发完成，版号申请中；
+                ② 处理棋子及场景材质；
 
-            > 人员构成：一产品，三开发（一个后端，两个前端），一测试，我和另一个u3d程序负责开发，我主要负责游戏逻辑层处理，另一个负责底层；
+                ③ 与美术对接，规范资源格式，把控模型及场景效果；
 
-            > 简介：unity版本2018.4.10，NGUI系统，tolua热更框架，Animator动作系统，unity + Android Studio + Jenkins 自动出包。
+                ④ 模型及场景动画系统；
 
-            > 我的主要工作
+                ⑤ 人物换装系统；
 
-            ① UI界面搭建及业务逻辑；
-            ② 处理棋子及场景材质；
-            ③ 与美术对接，规范资源格式，把控模型及场景效果；
-            ④ 模型及场景动画系统；
-            ⑤ 人物换装系统；
-            ⑥ UI界面优化：Draw Call , Over Draw, 界面互斥处理，UI界面与模型与特效之间层级管理；
-            ⑦ 资源：模型，图片，音频，动作资源导入处理及优化工具；
-            ⑧ 打包：项目打包是unity导出安卓包到Android Studio内进行编译，导出我做了自动化脚本，AS内编译为公司统一流程。
+                ⑥ UI界面优化：Draw Call , Over Draw, 界面互斥处理，UI界面与模型与特效之间层级管理；
 
-            > 一些效果图
+                ⑦ 资源：模型，图片，音频，动作资源导入处理及优化工具；
 
-                > ![](http://ww1.sinaimg.cn/large/006zwgbUly1gd1ql4egrwj31o00u0jv3.jpg)
+                ⑧ 打包：项目打包是unity导出安卓包到Android Studio内进行编译，导出我做了自动化脚本，AS内编译为公司统一流程。
 
-                > ![](http://ww1.sinaimg.cn/large/006zwgbUly1gd1qlkcse5j31o00u077r.jpg)
+            * 一些效果图
 
-                > ![](http://ww1.sinaimg.cn/large/006zwgbUly1gd1qluuhhkj31o00u00w5.jpg)
+                ![](http://ww1.sinaimg.cn/large/006zwgbUly1gd1ql4egrwj31o00u0jv3.jpg)
 
-                > ![](http://ww1.sinaimg.cn/large/006zwgbUly1gd1qm493fxj31o00u0n0p.jpg)
+                ![](http://ww1.sinaimg.cn/large/006zwgbUly1gd1qlkcse5j31o00u077r.jpg)
+
+                ![](http://ww1.sinaimg.cn/large/006zwgbUly1gd1qluuhhkj31o00u00w5.jpg)
+
+                ![](http://ww1.sinaimg.cn/large/006zwgbUly1gd1qm493fxj31o00u0n0p.jpg)
 
         * 3D麻将
 
-            > 时间：2019.8.26 – 2019.12.30
-
-            > 目前状态：开发完成，已上线（3D版仅OPPO渠道），可在OPPO商店下载游玩。
-
-            > 人员构成：一产品，四开发（一个后端，两个前端，一个SDK），一测试，U3D程序同五子棋项目
-
-            > 说明：这个项目是这个公司的第一个3D项目，后续3D项目用的很多东西均是在这个项目中进行开发和架构的，我的很多工作也主要体现在这个项目中，与之后的项目（上面五子棋介绍的工作内容）中的工作项目基本雷同，除了一些针对游戏的细节处理，就不再做说明了
+            * 时间：2019.8.26 – 2019.12.30
+            * 目前状态：开发完成，已上线（3D版仅OPPO渠道），可在OPPO商店下载游玩。
+            * 人员构成：一产品，四开发（一个后端，两个前端，一个SDK），一测试，U3D程序同五子棋项目
+            * 说明：这个项目是这个公司的第一个3D项目，后续3D项目用的很多东西均是在这个项目中进行开发和架构的，我的很多工作也主要体现在这个项目中，与之后的项目（上面五子棋介绍的工作内容）中的工作项目基本雷同，除了一些针对游戏的细节处理，就不再做说明了
             
-            > 一些效果图
+            * 一些效果图
 
-                > ![](http://ww1.sinaimg.cn/large/006zwgbUly1gd1qmc3wu1j31o00u0q6l.jpg)
+                ![](http://ww1.sinaimg.cn/large/006zwgbUly1gd1qmc3wu1j31o00u0q6l.jpg)
 
-                > ![](http://ww1.sinaimg.cn/large/006zwgbUly1gd1qmmmx1bj31o00u0tc3.jpg)
+                ![](http://ww1.sinaimg.cn/large/006zwgbUly1gd1qmmmx1bj31o00u0tc3.jpg)
 
-                > ![](http://ww1.sinaimg.cn/large/006zwgbUly1gd1qmuxuraj31o00u0djq.jpg)
+                ![](http://ww1.sinaimg.cn/large/006zwgbUly1gd1qmuxuraj31o00u0djq.jpg)
 
-                > ![](http://ww1.sinaimg.cn/large/006zwgbUly1gd1qn2v35hj31o00u0djv.jpg)
+                ![](http://ww1.sinaimg.cn/large/006zwgbUly1gd1qn2v35hj31o00u0djv.jpg)
 
 * **2017.9-2019.8.20**
     * 公司：杭州盛和网络科技有限公司
