@@ -163,7 +163,8 @@ author: FSH
                 asettings.format = importer.DoesSourceTextureHaveAlpha() ? defaultAlpha : defaultNotAlpha;
                 importer.SetPlatformTextureSettings(asettings);
             ```
-3、完整代码
+            
+#### 三、完整代码
 
 ``` c#
 using System.Reflection;
