@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "unity 各平台C++库的试用"
+title: "unity 各平台C++库的调用"
 categories: unity
 tags: c++
 author: FSH
