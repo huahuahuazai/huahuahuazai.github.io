@@ -35,20 +35,16 @@ author: FSH
         - ![2.png](http://ww1.sinaimg.cn/large/006zwgbUly1ghltr3n261j30nn0gtjsc.jpg)
     
 - 删除默认创建的c++文件
-
-&ensp;&ensp;&ensp;&ensp;![3.png](http://ww1.sinaimg.cn/large/006zwgbUly1ghlts9rzi9j307m09eq32.jpg)
+    - ![3.png](http://ww1.sinaimg.cn/large/006zwgbUly1ghlts9rzi9j307m09eq32.jpg)
 
 - 拷贝自己的C++文件到工程目录
-
-![5.png](http://ww1.sinaimg.cn/large/006zwgbUly1ghltx91ax9j30fo07q3yv.jpg)
+    - ![5.png](http://ww1.sinaimg.cn/large/006zwgbUly1ghltx91ax9j30fo07q3yv.jpg)
 
 - 把拷贝过来的C++源文件及头部文件分别添加到项目内
-
-![4.png](http://ww1.sinaimg.cn/large/006zwgbUly1ghltzhmxqfj30n504g74t.jpg)
+    - ![4.png](http://ww1.sinaimg.cn/large/006zwgbUly1ghltzhmxqfj30n504g74t.jpg)
 
 - 修改项目属性取消使用预编译头
-
-![6.png](http://ww1.sinaimg.cn/large/006zwgbUly1ghlu4gdfszj30ns0c5t91.jpg)
+    - ![6.png](http://ww1.sinaimg.cn/large/006zwgbUly1ghlu4gdfszj30ns0c5t91.jpg)
 
 - 根据需要生成对应平台的debug或者release即可
 
@@ -57,16 +53,13 @@ author: FSH
 - 创建jni文件夹
 - 把自己的C++文件放置到jni文件夹内
 - 创建Android.mk文件，并设置如下
-
-![7.png](http://ww1.sinaimg.cn/large/006zwgbUly1ghluaajrefj30ox0880t4.jpg)
+    - ![7.png](http://ww1.sinaimg.cn/large/006zwgbUly1ghluaajrefj30ox0880t4.jpg)
 
 - 创建Application.mk文件夹，并设置如下
-
-![8.png](http://ww1.sinaimg.cn/large/006zwgbUly1ghlubaq1g4j30ie072jrl.jpg)
+    - ![8.png](http://ww1.sinaimg.cn/large/006zwgbUly1ghlubaq1g4j30ie072jrl.jpg)
 
 - 打开cmd，cd到jni目录下执行ndk-build即可，生成的.so在上级目录libs内
-
-![9.png](http://ww1.sinaimg.cn/large/006zwgbUly1ghlucnssf1j30cq05rmx3.jpg)
+    - ![9.png](http://ww1.sinaimg.cn/large/006zwgbUly1ghlucnssf1j30cq05rmx3.jpg)
 
 ##### 3、IOS内.a文件生成
 
