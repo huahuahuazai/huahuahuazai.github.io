@@ -22,7 +22,7 @@ author: FSH
 
 
 
-    
+
 
 - 什么是shader?
     - shader 是运行在GPU流水线上一些高度可编程阶段的程序;
@@ -249,3 +249,6 @@ author: FSH
             - 计算H：归一化（光照方向与视角方向的和）；v:视角方向；i:光照方向
             
             ![36.png](http://ww1.sinaimg.cn/large/006zwgbUly1gdt7vn0zxdj305h02t745.jpg)
+
+
+**参考：冯乐乐 《Unity Shader入门精要》**
