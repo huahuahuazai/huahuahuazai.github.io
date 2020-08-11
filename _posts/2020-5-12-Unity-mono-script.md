@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "unity 各平台C++库的调用"
+title: "修改Mono脚本创建模板"
 categories: unity
-tags: c++
+tags: Editor
 author: FSH
 ---
 
@@ -18,7 +18,7 @@ author: FSH
 
 
 
-    
+
 
 - 默认创建的脚本没有题头说明，后续自己加又不方便；修改后可自行添加题头说明；
     > ![2.png](http://ww1.sinaimg.cn/large/006zwgbUly1ghmvy55ovaj30az038mx1.jpg)
